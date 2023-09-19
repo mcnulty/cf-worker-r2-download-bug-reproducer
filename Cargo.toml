@@ -1,0 +1,48 @@
+[package]
+name = "r2-download-bug"
+version = "0.1.0"
+edition = "2021"
+
+# https://github.com/rustwasm/wasm-pack/issues/1247
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = { git = "https://github.com/cloudflare/workers-rs.git" }
+
+[dependencies.web-sys]
+version = "0.3.63"
+features = [
+    "ReadableStream",
+    "WritableStream",
+    "RequestRedirect",
+    "RequestInit",
+    "FormData",
+    "Blob",
+    "BinaryType",
+    "ErrorEvent",
+    "MessageEvent",
+    "CloseEvent",
+    "ProgressEvent",
+    "WebSocket",
+    "TransformStream",
+    "AbortController",
+    "console",
+    "ResponseInit",
+    "Cache",
+    "CacheStorage",
+    "CacheQueryOptions",
+    "AbortSignal",
+    "Headers",
+    "Request",
+    "Response",
+    "Crypto",
+]
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1

@@ -1,0 +1,8 @@
+name = "local-r2-sync"
+main = "src/worker.ts"
+compatibility_date = "2023-05-18"
+
+[[r2_buckets]]
+binding = "BIN"
+bucket_name = "r2-download-bug"
+preview_bucket_name = "preview-r2-download-bug"

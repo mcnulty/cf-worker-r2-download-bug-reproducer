@@ -1,0 +1,15 @@
+{
+	"name": "r2-download-bug",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev --env local",
+		"compile": "worker-build --release",
+		"gen-test-file": "dd if=/dev/urandom of=./bucket-src/200MB-file bs=1M count=200",
+		"setup-local-r2": "rm -rf .wrangler/state/v3/r2/preview-r2-download-bug && ./local-r2-sync/sync.sh ./bucket-src http://localhost:8787/ && mv ./local-r2-sync/bucket/v3/r2/preview-r2-download-bug .wrangler/state/v3/r2/preview-r2-download-bug"
+	},
+	"devDependencies": {
+		"wrangler": "beta"
+	}
+}
