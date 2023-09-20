@@ -76,9 +76,9 @@ async fn entry(req: Request, env: Env) -> Result<Response> {
         return Ok(empty_with_status(200).with_headers(headers));
     }
 
-    let response_body = body.stream()?;
+    let response_body = body.response_body()?;
 
-    Ok(Response::from_stream(response_body)?
+    Ok(Response::from_body(response_body)?
         .with_headers(headers)
         .with_status(200))
 }

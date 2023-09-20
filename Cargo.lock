@@ -717,7 +717,7 @@ dependencies = [
 [[package]]
 name = "worker"
 version = "0.0.19"
-source = "git+https://github.com/cloudflare/workers-rs.git#4663a8ac7e0d94a1d277a74a9c7c600d013259d3"
+source = "git+https://github.com/mcnulty/workers-rs.git?branch=fix-389#3a9b0f08502490555de2c059251ce1c35486a655"
 dependencies = [
  "async-trait",
  "chrono",
@@ -761,7 +761,7 @@ dependencies = [
 [[package]]
 name = "worker-macros"
 version = "0.0.11"
-source = "git+https://github.com/cloudflare/workers-rs.git#4663a8ac7e0d94a1d277a74a9c7c600d013259d3"
+source = "git+https://github.com/mcnulty/workers-rs.git?branch=fix-389#3a9b0f08502490555de2c059251ce1c35486a655"
 dependencies = [
  "async-trait",
  "proc-macro2",
@@ -776,7 +776,7 @@ dependencies = [
 [[package]]
 name = "worker-sys"
 version = "0.0.11"
-source = "git+https://github.com/cloudflare/workers-rs.git#4663a8ac7e0d94a1d277a74a9c7c600d013259d3"
+source = "git+https://github.com/mcnulty/workers-rs.git?branch=fix-389#3a9b0f08502490555de2c059251ce1c35486a655"
 dependencies = [
  "cfg-if",
  "js-sys",

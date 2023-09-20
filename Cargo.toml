@@ -11,7 +11,7 @@ wasm-opt = false
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = { git = "https://github.com/cloudflare/workers-rs.git" }
+worker = { git = "https://github.com/mcnulty/workers-rs.git", branch = "fix-389" }
 
 [dependencies.web-sys]
 version = "0.3.63"
